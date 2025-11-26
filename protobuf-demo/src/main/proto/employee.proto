@@ -1,0 +1,123 @@
+// there are so many different version for current syntax-> we use proto3
+syntax ="proto3";
+
+
+// import something -> if needed( e.g. dataType)
+import "google/protobuf/timestamp.proto";
+
+package com.demo;
+
+
+// read this (section only part after read all below part
+
+// to tell the proto file hey -> while generating generate multiple file for each
+// message -> because before it create a outer and all things are in that one
+// while generating java class this(below option) things will be considered
+option java_multiple_files=true;
+option java_package="com.demo";
+option java_outer_classname="EmployeeProto";
+// after this maven(side logo) -> protobuf-demo -> Lifecycle -> install
+// after this check target folder -> all things are created
+
+
+
+
+message Employee{
+
+
+  int32 id=1;  // just assign no. to each field
+  string name=2;
+  double salary=3;
+  repeated Department department=4; //  -> here for List<Department>
+  map<string,string> addressMap=5;
+  bool isActive =6;
+  bytes profilePicture =7;  //  byte[]
+  google.protobuf.Timestamp joinDate=8; // not available so import it from google above
+
+  /*
+
+  <-------------------some details-------------->
+ why no. is assign -> u can consider them as field tag / field number ->how protobuf work
+
+    JSON
+    {
+ "id": 123,
+"name": "John",
+"salary": 5000
+    }
+
+    now this data is converted into obj not by   id/name/salary
+    instead here it check field
+
+
+     {
+     1: 123,
+     2:"John",
+     3:5000
+     }
+
+     this make it compact -> field tag and value
+     that's why here serialization  and de-serialization
+      -> faster
+      check img in resource for detail
+
+
+ */
+
+
+
+}
+
+message Department{
+  int32 id=1;
+  string name=2;
+}
+
+
+/*
+
+      define contract in gRPC
+      define service in protobuf
+      u can define as part of ur proto file -> similar as interface in java
+
+
+ */
+
+
+// this is used as input in method -> for 1st method
+message EmployeeRequest{
+  int32 id=1;
+}
+
+// return all employee
+message EmployeeList{
+  repeated Employee employee=1;
+}
+
+// when take no input so we have to
+// accept something in here so use Empty message
+message Empty{
+
+}
+
+service EmployeeService{
+
+  // get employee by id
+  // here for input we can pass single field -> pass message
+  // this one u can think like abstract method
+  rpc getEmployee(EmployeeRequest) returns (Employee);
+
+
+  // method to add an employee
+  rpc addEmployee(Employee) returns (Employee);
+
+  // fetch all the employee
+  rpc getAllEmployees(Empty) returns (EmployeeList);
+
+
+
+}
+
+// after this maven(side logo) -> protobuf-demo -> Lifecycle -> install
+
+// after this check target folder -> all things are created
