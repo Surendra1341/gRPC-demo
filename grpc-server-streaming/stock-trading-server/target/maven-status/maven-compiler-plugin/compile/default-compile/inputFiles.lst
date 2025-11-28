@@ -1,0 +1,10 @@
+C:\Users\asus\IdeaProjects\gRPC\grpc-server-streaming\stock-trading-server\src\main\java\com\javatechie\entity\Stock.java
+C:\Users\asus\IdeaProjects\gRPC\grpc-server-streaming\stock-trading-server\src\main\java\com\javatechie\repository\StockRepository.java
+C:\Users\asus\IdeaProjects\gRPC\grpc-server-streaming\stock-trading-server\src\main\java\com\javatechie\service\StockTradingServiceImpl.java
+C:\Users\asus\IdeaProjects\gRPC\grpc-server-streaming\stock-trading-server\src\main\java\com\javatechie\StockTradingServerApplication.java
+C:\Users\asus\IdeaProjects\gRPC\grpc-server-streaming\stock-trading-server\target\generated-sources\protobuf\grpc-java\com\demo\grpc\StockTradingServiceGrpc.java
+C:\Users\asus\IdeaProjects\gRPC\grpc-server-streaming\stock-trading-server\target\generated-sources\protobuf\java\com\demo\grpc\StockRequest.java
+C:\Users\asus\IdeaProjects\gRPC\grpc-server-streaming\stock-trading-server\target\generated-sources\protobuf\java\com\demo\grpc\StockRequestOrBuilder.java
+C:\Users\asus\IdeaProjects\gRPC\grpc-server-streaming\stock-trading-server\target\generated-sources\protobuf\java\com\demo\grpc\StockResponse.java
+C:\Users\asus\IdeaProjects\gRPC\grpc-server-streaming\stock-trading-server\target\generated-sources\protobuf\java\com\demo\grpc\StockResponseOrBuilder.java
+C:\Users\asus\IdeaProjects\gRPC\grpc-server-streaming\stock-trading-server\target\generated-sources\protobuf\java\com\demo\grpc\StockTradingProto.java
