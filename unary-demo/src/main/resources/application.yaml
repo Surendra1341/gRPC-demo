@@ -1,0 +1,7 @@
+
+
+grpc:
+  server:
+    port: 9090
+    enable-reflection: true # to test it through postman or any third part
+
