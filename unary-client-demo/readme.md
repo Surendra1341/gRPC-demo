@@ -6,6 +6,15 @@ Project: simple gRPC unary client that calls `StockTradingService.getStockPrice`
 1. Purpose: act as a client for testing the `unary-server-demo`. It sends a unary request for a stock symbol and prints the server response at startup.
 2. Java / Spring Boot / Maven project targeting Java 17.
 
+3. Images
+------
+Inline images (these will display on Git hosting that supports relative paths):
+
+Unary concept diagram:
+
+![unary diagram](src/main/resources/unary.png)
+-----------
+
 ## Important files
 1. `src/main/java/com/demo/unaryclientdemo/UnaryClientDemoApplication.java`
     - Spring Boot `CommandLineRunner` that calls the client service and prints response for `"GOOGL"`.
