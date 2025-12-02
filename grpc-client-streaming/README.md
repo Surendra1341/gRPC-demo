@@ -1,6 +1,6 @@
 # gRPC Client-Streaming: Stock Trading Client
 
-![gRPC Client Streaming](grpc-client-streaming/img.png)
+![Client streaming diagram diagram](img.png)
 
 ## Project Overview
 A simple Spring Boot Java client demonstrating gRPC streaming patterns, focused on client-streaming and server-streaming examples for a stock trading service. The client connects to a gRPC server (`stockService`) to:
